@@ -28,7 +28,7 @@ namespace MobaPrototype
 
         [Header("Wave settings")]
         public float spawnInterval = 8f;
-        public int creepsPerWave = 5;
+        public int creepsPerWave = 3;
         public float creepSpacing = 1.5f;
 
         private float timer;
