@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 namespace MobaPrototype
@@ -15,15 +16,25 @@ namespace MobaPrototype
         public TeamId team = TeamId.Ally;
         public UnitType unitType = UnitType.Creep;
 
+        [Header("Player respawn (only used when Unit Type = Player)")]
+        public float respawnDelay = 5f;
+        public Transform respawnPoint; // optional - leave empty to respawn at the starting position
+
         public int CurrentHealth { get; private set; }
         public bool IsDead { get; private set; }
+        public float RespawnTimeRemaining { get; private set; }
 
         /// <summary>Raised once, the moment this unit's health reaches zero.</summary>
         public event Action<Health, TeamId> OnDeath;
 
+        private Vector3 spawnPosition;
+        private Quaternion spawnRotation;
+
         private void Awake()
         {
             CurrentHealth = maxHealth;
+            spawnPosition = transform.position;
+            spawnRotation = transform.rotation;
         }
 
         public void TakeDamage(int amount, TeamId attackerTeam)
@@ -55,12 +66,14 @@ namespace MobaPrototype
                     break;
 
                 case UnitType.Player:
-                    // Keep the player object around (single session, no respawn needed
-                    // for the prototype) but stop it from acting further.
+                    // Freeze the hero briefly, then bring it back to life at the
+                    // spawn point with full health instead of leaving it stuck dead.
                     var movement = GetComponent<PlayerMovement>();
                     if (movement != null) movement.enabled = false;
                     var combat = GetComponent<PlayerCombat>();
                     if (combat != null) combat.enabled = false;
+
+                    StartCoroutine(RespawnPlayerRoutine());
                     break;
 
                 case UnitType.Tower:
@@ -77,6 +90,32 @@ namespace MobaPrototype
                     if (collider != null) collider.enabled = false;
                     break;
             }
+        }
+
+        private IEnumerator RespawnPlayerRoutine()
+        {
+            RespawnTimeRemaining = respawnDelay;
+            while (RespawnTimeRemaining > 0f)
+            {
+                yield return null;
+                RespawnTimeRemaining -= Time.deltaTime;
+            }
+
+            Vector3 targetPos = respawnPoint != null ? respawnPoint.position : spawnPosition;
+            Quaternion targetRot = respawnPoint != null ? respawnPoint.rotation : spawnRotation;
+
+            var controller = GetComponent<CharacterController>();
+            if (controller != null) controller.enabled = false;
+            transform.SetPositionAndRotation(targetPos, targetRot);
+            if (controller != null) controller.enabled = true;
+
+            CurrentHealth = maxHealth;
+            IsDead = false;
+
+            var movement = GetComponent<PlayerMovement>();
+            if (movement != null) movement.enabled = true;
+            var combat = GetComponent<PlayerCombat>();
+            if (combat != null) combat.enabled = true;
         }
 
         public float HealthPercent01 => maxHealth <= 0 ? 0f : (float)CurrentHealth / maxHealth;

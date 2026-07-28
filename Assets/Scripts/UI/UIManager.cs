@@ -47,7 +47,11 @@ namespace MobaPrototype
             enemyKillsText.text = $"Enemy kills: {GameManager.Instance.enemyKills}";
 
             if (playerHealth != null)
-                playerHealthText.text = $"HP: {playerHealth.CurrentHealth}/{playerHealth.maxHealth}";
+            {
+                playerHealthText.text = playerHealth.IsDead
+                    ? $"Respawning in {Mathf.CeilToInt(playerHealth.RespawnTimeRemaining)}s"
+                    : $"HP: {playerHealth.CurrentHealth}/{playerHealth.maxHealth}";
+            }
         }
 
         public void ShowGameOver(GameManager gm)
