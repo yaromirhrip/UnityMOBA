@@ -8,7 +8,7 @@ namespace MobaPrototype
     public class CameraFollow : MonoBehaviour
     {
         public Transform target;
-        public Vector3 offset = new Vector3(0f, 24f, -9f);
+        public Vector3 offset = new Vector3(0f, 13f, -5f);
         public float smoothSpeed = 5f;
 
         private void LateUpdate()

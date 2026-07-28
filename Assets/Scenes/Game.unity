@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 269068391}
   - component: {fileID: 269068390}
   - component: {fileID: 700000001}
+  - component: {fileID: 710000002}
   m_Layer: 0
   m_Name: EnemyBase
   m_TagString: Untagged
@@ -368,171 +369,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 684799163}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &700000001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 269068388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e18a2b9faa7748749b3b6ab7a92b2d44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 500
-  team: 1
-  unitType: 3
---- !u!114 &700000002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1060969704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e18a2b9faa7748749b3b6ab7a92b2d44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 500
-  team: 0
-  unitType: 3
---- !u!114 &700000003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1174497013}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e18a2b9faa7748749b3b6ab7a92b2d44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 300
-  team: 1
-  unitType: 2
---- !u!114 &700000004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1174497013}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96a775df8b1742fba5f58b8c86d0fa4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 8
-  damage: 10
-  fireInterval: 1
-  projectilePrefab: {fileID: 3000030001, guid: 587e91b404394fd9bc827416b6116e65, type: 3}
-  firePoint: {fileID: 0}
---- !u!114 &700000005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2124844592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e18a2b9faa7748749b3b6ab7a92b2d44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 300
-  team: 0
-  unitType: 2
---- !u!114 &700000006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2124844592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96a775df8b1742fba5f58b8c86d0fa4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 8
-  damage: 10
-  fireInterval: 1
-  projectilePrefab: {fileID: 3000030001, guid: 587e91b404394fd9bc827416b6116e65, type: 3}
-  firePoint: {fileID: 0}
---- !u!114 &700000007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 782818741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0603a093441f4ba7af6f16e1ab65066c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackRange: 3
-  attackDamage: 15
-  attackCooldown: 0.6
---- !u!114 &700000008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 992881058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f26d982ab56f4d4fb5f00fbc2cb0cfb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allyBaseHealth: {fileID: 700000002}
-  enemyBaseHealth: {fileID: 700000001}
-  allyKills: 0
-  enemyKills: 0
-  allyDamageDealt: 0
-  enemyDamageDealt: 0
-  elapsedTime: 0
---- !u!114 &700000009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 553172096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f8f3a4e1dec4c069d211e1ee4811c71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allyCreepPrefab: {fileID: 1000010001, guid: 43cb6c15889949669d72c714787b83b1, type: 3}
-  enemyCreepPrefab: {fileID: 2000020001, guid: b0fa0da8e3a24b739c313212b15e3616, type: 3}
-  allySpawnPoint: {fileID: 684799164}
-  enemySpawnPoint: {fileID: 1571243130}
-  allyLaneDestination: {fileID: 269068389}
-  enemyLaneDestination: {fileID: 1060969705}
-  alliesContainer: {fileID: 1799902058}
-  enemiesContainer: {fileID: 2087908039}
-  spawnInterval: 8
-  creepsPerWave: 3
-  creepSpacing: 1.5
---- !u!114 &700000010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1542100958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d85a554b80ee4fc5ab0d9dc867e275c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvasRoot: {fileID: 1949104393}
-  playerHealth: {fileID: 782818747}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,6 +625,7 @@ GameObject:
   - component: {fileID: 782818747}
   - component: {fileID: 782818748}
   - component: {fileID: 700000007}
+  - component: {fileID: 710000001}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -842,7 +679,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 89a33710d20b2584a922562d97b9d4d1, type: 2}
+  - {fileID: 2100000, guid: 01f41b2e313445c9822e63396e112d39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -924,7 +761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e18a2b9faa7748749b3b6ab7a92b2d44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 300
   team: 0
   unitType: 0
 --- !u!114 &782818748
@@ -940,8 +777,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 7
-  gravity: -9.81
-  rotationSpeed: 12
 --- !u!1 &867468082
 GameObject:
   m_ObjectHideFlags: 0
@@ -1093,7 +928,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
-  m_LocalPosition: {x: 0, y: 25, z: -21}
+  m_LocalPosition: {x: 0, y: 14, z: -17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1112,7 +947,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 782818745}
-  offset: {x: 0, y: 24, z: -9}
+  offset: {x: 0, y: 13, z: -5}
   smoothSpeed: 5
 --- !u!1 &992881058
 GameObject:
@@ -1159,6 +994,7 @@ GameObject:
   - component: {fileID: 1060969707}
   - component: {fileID: 1060969706}
   - component: {fileID: 700000002}
+  - component: {fileID: 710000003}
   m_Layer: 0
   m_Name: AllyBase
   m_TagString: Untagged
@@ -1269,6 +1105,7 @@ GameObject:
   - component: {fileID: 1174497015}
   - component: {fileID: 700000003}
   - component: {fileID: 700000004}
+  - component: {fileID: 710000004}
   m_Layer: 0
   m_Name: EnemyTower
   m_TagString: Untagged
@@ -1886,6 +1723,7 @@ GameObject:
   - component: {fileID: 2124844594}
   - component: {fileID: 700000005}
   - component: {fileID: 700000006}
+  - component: {fileID: 710000005}
   m_Layer: 0
   m_Name: AllyTower
   m_TagString: Untagged
@@ -1984,6 +1822,246 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2124844592}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &700000001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269068388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e18a2b9faa7748749b3b6ab7a92b2d44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 500
+  team: 1
+  unitType: 3
+--- !u!114 &700000002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060969704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e18a2b9faa7748749b3b6ab7a92b2d44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 500
+  team: 0
+  unitType: 3
+--- !u!114 &700000003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174497013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e18a2b9faa7748749b3b6ab7a92b2d44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 300
+  team: 1
+  unitType: 2
+--- !u!114 &700000004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174497013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96a775df8b1742fba5f58b8c86d0fa4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 8
+  damage: 10
+  fireInterval: 1
+  projectilePrefab: {fileID: 3000030001, guid: 587e91b404394fd9bc827416b6116e65, type: 3}
+  firePoint: {fileID: 0}
+--- !u!114 &700000005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124844592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e18a2b9faa7748749b3b6ab7a92b2d44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 300
+  team: 0
+  unitType: 2
+--- !u!114 &700000006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124844592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96a775df8b1742fba5f58b8c86d0fa4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 8
+  damage: 10
+  fireInterval: 1
+  projectilePrefab: {fileID: 3000030001, guid: 587e91b404394fd9bc827416b6116e65, type: 3}
+  firePoint: {fileID: 0}
+--- !u!114 &700000007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782818741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0603a093441f4ba7af6f16e1ab65066c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: 3
+  attackDamage: 30
+  attackCooldown: 0.6
+--- !u!114 &700000008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992881058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f26d982ab56f4d4fb5f00fbc2cb0cfb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allyBaseHealth: {fileID: 700000002}
+  enemyBaseHealth: {fileID: 700000001}
+  allyKills: 0
+  enemyKills: 0
+  allyDamageDealt: 0
+  enemyDamageDealt: 0
+  elapsedTime: 0
+--- !u!114 &700000009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553172096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f8f3a4e1dec4c069d211e1ee4811c71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allyCreepPrefab: {fileID: 1000010001, guid: 43cb6c15889949669d72c714787b83b1, type: 3}
+  enemyCreepPrefab: {fileID: 2000020001, guid: b0fa0da8e3a24b739c313212b15e3616, type: 3}
+  allySpawnPoint: {fileID: 684799164}
+  enemySpawnPoint: {fileID: 1571243130}
+  allyLaneDestination: {fileID: 269068389}
+  enemyLaneDestination: {fileID: 1060969705}
+  alliesContainer: {fileID: 1799902058}
+  enemiesContainer: {fileID: 2087908039}
+  spawnInterval: 8
+  creepsPerWave: 3
+  creepSpacing: 1.5
+--- !u!114 &700000010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1542100958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d85a554b80ee4fc5ab0d9dc867e275c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasRoot: {fileID: 1949104393}
+  playerHealth: {fileID: 782818747}
+--- !u!114 &710000001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782818741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e816c49b6db4ace9f07c291c9cab50d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localOffset: {x: 0, y: 1.3, z: 0}
+  worldWidth: 1.2
+  worldHeight: 0.18
+--- !u!114 &710000002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269068388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e816c49b6db4ace9f07c291c9cab50d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localOffset: {x: 0, y: 1.5, z: 0}
+  worldWidth: 3
+  worldHeight: 0.25
+--- !u!114 &710000003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060969704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e816c49b6db4ace9f07c291c9cab50d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localOffset: {x: 0, y: 1.5, z: 0}
+  worldWidth: 3
+  worldHeight: 0.25
+--- !u!114 &710000004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174497013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e816c49b6db4ace9f07c291c9cab50d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localOffset: {x: 0, y: 1.6, z: 0}
+  worldWidth: 2
+  worldHeight: 0.22
+--- !u!114 &710000005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124844592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e816c49b6db4ace9f07c291c9cab50d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localOffset: {x: 0, y: 1.6, z: 0}
+  worldWidth: 2
+  worldHeight: 0.22
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

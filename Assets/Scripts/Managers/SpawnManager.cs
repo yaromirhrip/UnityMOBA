@@ -28,7 +28,7 @@ namespace MobaPrototype
 
         [Header("Wave settings")]
         public float spawnInterval = 8f;
-        public int creepsPerWave = 3;
+        public int creepsPerWave = 5;
         public float creepSpacing = 1.5f;
 
         private float timer;
@@ -59,7 +59,8 @@ namespace MobaPrototype
         {
             if (prefab == null || spawnPoint == null) return;
 
-            Vector3 spawnPos = spawnPoint.position + new Vector3(index * creepSpacing - creepSpacing, 0f, 0f);
+            float centeredOffset = (index - (creepsPerWave - 1) / 2f) * creepSpacing;
+            Vector3 spawnPos = spawnPoint.position + new Vector3(centeredOffset, 0f, 0f);
             GameObject creepGO = Instantiate(prefab, spawnPos, spawnPoint.rotation, container);
 
             LaneUnitAI ai = creepGO.GetComponent<LaneUnitAI>();
